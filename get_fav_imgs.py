@@ -49,7 +49,7 @@ class TwitterCrawler:
             except TweepError:
                 # Hit rate limit :(
                 break
-            for i, tweet in enumerate(fav_tweets):
+            for tweet in fav_tweets:
                 json_data = tweet._json
                 try:
                     image_url = json_data['extended_entities']['media'][0]['media_url']
